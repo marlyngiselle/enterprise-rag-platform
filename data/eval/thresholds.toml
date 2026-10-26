@@ -1,0 +1,15 @@
+# Regression gate for the offline evaluation. CI fails when a metric drops below its minimum.
+# Minimums sit a few points under the last measured run with heading chunking, so noise does
+# not block a merge but a real regression does. Fixed size chunking fails this gate on
+# answer_rate and refusal_accuracy, which is the point of having it.
+
+[gate]
+recall_at_k = 0.95
+mrr = 0.90
+ndcg_at_k = 0.90
+answer_rate = 0.85
+citation_coverage = 0.95
+groundedness = 0.95
+term_recall = 0.90
+refusal_accuracy = 0.88
+max_access_violations = 0
