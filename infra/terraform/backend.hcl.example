@@ -1,0 +1,4 @@
+resource_group_name  = "rg-tfstate"
+storage_account_name = "sttfstateexample"
+container_name       = "tfstate"
+key                  = "enterprise-rag/dev.tfstate"
